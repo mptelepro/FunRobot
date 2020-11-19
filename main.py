@@ -20,7 +20,7 @@ FunBot = Client(
 
 CHATSTOWORK = Credentials.CHAT_GROUPS
 
-@FunBot.on_message(filters.command("start") & filters.chat(f'{CHATSTOWORK}'))
+@FunBot.on_message(filters.command("start") & (filters.group | filters.private))
 async def start(client, message):
     await message.reply_text(
         f"**Hi, I am FunBot. I can Perform Many Task For You. To know then send `/help`**",
@@ -34,28 +34,28 @@ async def start(client, message):
     )
 
    
-@FunBot.on_message(filters.command("dice") & filters.chat(f'{CHATSTOWORK}'))
+@FunBot.on_message(filters.command("dice") & (filters.group | filters.private))
 async def throwdice(client, message):
     diceoutput = random.randrange(1,6)
     await message.reply_text(f"**Results ==>> {diceoutput}**",True)
     
     
-@FunBot.on_message(filters.command("jokes") & filters.chat(f'{CHATSTOWORK}'))
+@FunBot.on_message(filters.command("jokes") & filters.group)
 async def jokesop(client, message):
     SARCASM = pyjokes.get_joke()
     await message.reply_text(f"`{SARCASM}`",True)
     
     
 Dechoices = ("Yes","No","Surely Yes","Maybe","Nooo.","God Knows","Cant decide")
-@FunBot.on_message(filters.command("decide") & filters.chat(f'{CHATSTOWORK}'))
+@FunBot.on_message(filters.command("decide") & (filters.group | filters.private))
 async def decideok(client, message):
     oploa = random.randrange(0,len(Dechoices)-1)
     Secom = Dechoices[oploa]
     await message.reply_text(f"{Secom}",True)
     
-@FunBot.on_message(filters.command("kill") & filters.chat(f'{CHATSTOWORK}'))
+@FunBot.on_message(filters.command("kill") & (filters.group | filters.private))
 async def killanime(client, message):
-    await client.send_message("Ready to Die...")
+    await FunBot.send_message("Ready to Die...")
     await shh.sleep(0.7)
     await message.edit_text("Ｆｉｉｉｉｉｒｅ")
     await shh.sleep(0.7)
