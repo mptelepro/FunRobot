@@ -3,3 +3,4 @@ tgcrypto
 python-dotenv
 pyjokes
 quote
+goodreads_quotes 
