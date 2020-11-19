@@ -3,8 +3,8 @@ import uuid
 import shutil
 import logging
 import random
-import asyncio
-import pyjokes as shh
+import asyncio as shh
+import pyjokes
 from pyrogram import Client, filters
 from creds import Credentials
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
