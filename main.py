@@ -44,10 +44,9 @@ async def throwdice(client, message):
                   )
 async def helpcmd(client, message):
     await message.reply_text(f"**Below are The Avaliable Commands**\n\n"
-                             "-`/dice`- Throw a Dice and Give Output\n"
-                             "-`/Jokes`- Gives Programming Jokes\n"
-                             "-`/decide`- Send Yes or No, etc Option..\n"
-                             "-`/quote`- send a Quote",True)
+                             "**- /dice - Throw a Dice and Give Output**\n"
+                             "**- /Jokes - Gives Programming Jokes\n**"
+                             "**- /decide - Send Yes or No, etc Option..**\n",True)
     
     
 @FunBot.on_message(filters.command("jokes") & (filters.group | filters.private))
@@ -56,7 +55,7 @@ async def jokesop(client, message):
     await message.reply_text(f"`{SARCASM}`",True)
     
     
-Dechoices = ("Yes","No","Surely Yes","Maybe","Nooo.","God Knows","Cant decide")
+Dechoices = ("Yes","No","Surely Yes","Maybe","Nooo.","God Knows","Cant decide","Yess","Nope")
 @FunBot.on_message(filters.command("decide") & (filters.group | filters.private))
 async def decideok(client, message):
     oploa = random.randrange(0,len(Dechoices)-1)
