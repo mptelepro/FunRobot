@@ -66,7 +66,7 @@ async def decideok(client, message):
 @FunBot.on_message(filters.command("quote") & (filters.group | filters.private))
 async def quotes(client, message):
     abc = random.choice(wikiquote.quotes('Stephen Hawking', lang="en"))
-    abc1 = f"{oze}\n\n**Author - __Stephen Hawking__**"
+    abc1 = f"{abc}\n\n**Author - __Stephen Hawking__**"
     bcd = random.choice(wikiquote.quotes('APJ Abdul Kalam', lang="en"))
     bcd1 = f"{bcd}\n\n**Author - __Apj Abdul Kalam__**"
     allen = random.choice([abc1,bcd1])
