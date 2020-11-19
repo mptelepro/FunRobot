@@ -2,6 +2,5 @@ pyrogram>=1.0.0
 tgcrypto
 python-dotenv
 pyjokes
-quote
-goodreads_quotes 
 wikiquote
+anime-downloader
