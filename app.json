@@ -14,7 +14,11 @@
       "value": ""
     },
     "CHAT_GROUPS": {
-      "description": "Enter The Username/ids of Groups where bot shou;d work",
+      "description": "Enter The Username/ids of Groups where bot should work",
+      "value": ""
+    },
+     "OWNER_ID": {
+      "description": "send /id to @Miss_rosebot and Enter Here",
       "value": ""
     },
     "API_HASH": {
