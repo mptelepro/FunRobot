@@ -63,12 +63,12 @@ async def decideok(client, message):
     Secom = Dechoices[oploa]
     await message.reply_text(f"{Secom}",True)
              
-@FunBot.on_message(filters.command("quote") & (filters.group | filters.private))
-async def quotes(client, message):
-    AUTHOR = random.choice(["Stephen Hawking","A._P._J._Abdul_Kalam","Vikram_Sarabhai","Narendra_Modi","Mahatma_Gandhi","Nikola_Tesla","Rabindranath_Tagore","Ruskin_Bond","Chetan_Bhagat",
-                           "Mulk_Raj_Anand","Jawaharlal_Nehru","Chanakya","Indira_Gandhi","C._V._Raman","Kapil_Dev","Bankim_Chandra_Chattopadhyay"])
-    machine = random.choice(wikiquote.quotes(f'{AUTHOR}', lang='en')) 
-    syntax = f"{machine}\n\n**Author - {AUTHOR}**" 
-    await message.reply_text(f"{syntax}",True)
+#@FunBot.on_message(filters.command("quote") & (filters.group | filters.private))
+#async def quotes(client, message):
+   #AUTHOR = random.choice(["Stephen Hawking","A._P._J._Abdul_Kalam","Vikram_Sarabhai","Narendra_Modi","Mahatma_Gandhi","Nikola_Tesla","Rabindranath_Tagore","Ruskin_Bond","Chetan_Bhagat",
+   #                        "Mulk_Raj_Anand","Jawaharlal_Nehru","Chanakya","Indira_Gandhi","C._V._Raman","Kapil_Dev","Bankim_Chandra_Chattopadhyay"])
+#   machine = random.choice(wikiquote.quotes(f'{AUTHOR}', lang='en')) 
+# syntax = f"{machine}\n\n**Author - {AUTHOR}**" 
+  # await message.reply_text(f"{syntax}",True)
     
 FunBot.run()
