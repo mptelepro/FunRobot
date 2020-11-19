@@ -37,7 +37,7 @@ async def start(client, message):
 diceoutput = random.randrange(1,6)
 @FunBot.on_message(filters.command("dice") & filters.chat(f'{CHATSTOWORK}'))
 async def throwdice(client, message):
-    await message.reply_text(f"**Dice Thrown !\n\nOuput\n==>> '{diceoutput}'**",True)
+    await message.reply_text(f"**Results ==>>  '{diceoutput}'**",True)
     
     
 @FunBot.on_message(filters.command("jokes") & filters.chat(f'{CHATSTOWORK}'))
