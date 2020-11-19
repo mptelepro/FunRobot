@@ -25,7 +25,13 @@ async def start(client, message):
     await message.reply_text(
         f"**Hi, I am FunBot. I can Perform Many Task For You. To know then send `/help`**",
         True,
-        reply_markup=InlineKeyboardMarkup[[InlineKeyboardButton(text="Updates Channel", url="t.me/prothinkergang")],[InlineKeyboardButton(text="Deploy Your Own Bot",url="#ToDo")]])
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton(text="Updates Channel", url="t.me/prothinkergang")],
+                [InlineKeyboardButton(text="Deploy Your Own Bot",url="#ToDo")]
+            ]
+        )
+    )
 
     
 diceoutput = random.randrange(1,6)
