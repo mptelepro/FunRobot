@@ -43,7 +43,11 @@ async def throwdice(client, message):
     
 @FunBot.on_message(filters.command("help") & (filters.chat(f'{CHATSTOWORK}') | filters.user(f"{OWNERID}")))
 async def helpcmd(client, message):
-    await message.reply_text(f"**Below are The Avaliable Commands**\n\n-`/dice`- Throw a Dice and Give Output\n-`/Jokes`- Gives Programming Jokes\n-`/decice`- Send Yes or No, etc Option..",True)
+    await message.reply_text(f"**Below are The Avaliable Commands**\n\n"
+                             "-`/dice`- Throw a Dice and Give Output\n"
+                             "-`/Jokes`- Gives Programming Jokes\n"
+                             "-`/decide`- Send Yes or No, etc Option..\n"
+                             "-`/quote`- send a Quote",True)
     
 @FunBot.on_message(filters.command("jokes") & (filters.chat(f'{CHATSTOWORK}') | filters.user(f"{OWNERID}")))
 async def jokesop(client, message):
@@ -60,7 +64,7 @@ async def decideok(client, message):
   
 @FunBot.on_message(filters.command("quote") & (filters.chat(f'{CHATSTOWORK}') | filters.user(f"{OWNERID}")))
 async def quotes(client, message):
-    sedo=random()
+    sedo = random()
     await message.reply_text(f"{sedo}",True)
    
     
