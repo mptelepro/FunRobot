@@ -47,7 +47,7 @@ async def helpcmd(client, message):
                              "-`/dice`- Throw a Dice and Give Output\n"
                              "-`/Jokes`- Gives Programming Jokes\n"
                              "-`/decide`- Send Yes or No, etc Option..\n"
-                             "-`/quote`- send a Quote",True)
+                             "-`/quote`- send a Quote of Stephen Hawking",True)
     
 @FunBot.on_message(filters.command("jokes") & (filters.chat(f'{CHATSTOWORK}') | filters.user(f"{OWNERID}")))
 async def jokesop(client, message):
@@ -64,7 +64,7 @@ async def decideok(client, message):
   
 @FunBot.on_message(filters.command("quote") & (filters.chat(f'{CHATSTOWORK}') | filters.user(f"{OWNERID}")))
 async def quotes(client, message):
-    oze = random.choice(wikiquote.quotes('albert Einstein', lang="en"))
+    oze = random.choice(wikiquote.quotes('stephen Hawking', lang="en"))
     await message.reply_text(f"{oze}",True)
     
 FunBot.run()
