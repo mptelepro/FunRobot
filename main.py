@@ -18,7 +18,9 @@ FunBot = Client(
 )
 
 CHATSTOWORK = Credentials.CHAT_GROUPS
-SARCASM = pyjokes.get_joke()
+while True:
+    SARCASM = pyjokes.get_joke()
+    
 
 @FunBot.on_message(filters.command("start") & filters.group)
 async def start(client, message):
@@ -34,7 +36,7 @@ diceoutput = random.randrange(1,6)
 
 @FunBot.on_message(filters.command("dice") & filters.chat(f'{CHATSTOWORK}'))
 async def throwdice(client, message):
-    await message.reply_text(f"**Dice Thrown !\n\nOuput\n==>>'{diceoutput}'**",True)
+    await message.reply_text(f"**Dice Thrown !\nOuput\n==>>'{diceoutput}'**",True)
     
 @FunBot.on_message(filters.command("vdice") & filters.chat(f'{CHATSTOWORK}'))
 async def throwdice(client, message):
@@ -49,8 +51,9 @@ async def throwdice(client, message):
     await message.reply_text(f"`{SARCASM}`",True)
     
 Dechoices = ("Yes","No","Surely Yes","Maybe","Nooo.","God Knows","Cant decide")
-oploa = random.randrange(0,len(Dechoices)-1)
-Secom = Dechoices[oploa]
+while True:
+    oploa = random.randrange(0,len(Dechoices)-1)
+    Secom = Dechoices[oploa]
     
 @FunBot.on_message(filters.command("decide") & filters.chat(f'{CHATSTOWORK}'))
 async def throwdice(client, message):
