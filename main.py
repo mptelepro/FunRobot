@@ -4,6 +4,7 @@ import shutil
 import logging
 import random
 import asyncio as shh
+import wikiquote
 import pyjokes
 from pyrogram import Client, filters
 from creds import Credentials
