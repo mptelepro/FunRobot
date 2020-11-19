@@ -5,7 +5,7 @@ import logging
 import random
 import asyncio as shh
 import pyjokes
-from quotes import random
+import wikiquote
 from pyrogram import Client, filters
 from creds import Credentials
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -64,8 +64,7 @@ async def decideok(client, message):
   
 @FunBot.on_message(filters.command("quote") & (filters.chat(f'{CHATSTOWORK}') | filters.user(f"{OWNERID}")))
 async def quotes(client, message):
-    sedo = random()
-    await message.reply_text(f"{sedo}",True)
-   
+    oze = random.choice(wikiquote.quotes('albert Einstein', lang="en"))
+    await message.reply_text(f"{oze}",True)
     
 FunBot.run()
