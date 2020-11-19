@@ -6,7 +6,6 @@ import random
 import asyncio as shh
 import pyjokes
 from pyrogram import Client, filters
-from quotes import random
 from creds import Credentials
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 logging.basicConfig(level=logging.INFO)
@@ -63,11 +62,9 @@ async def decideok(client, message):
     Secom = Dechoices[oploa]
     await message.reply_text(f"{Secom}",True)
              
-@FunBot.on_message(filters.command("quote") & (filters.group | filters.private)
-                  )
+@FunBot.on_message(filters.command("quote") & (filters.group | filters.private))
 async def quotes(client, message):
-    sedo = random()
-    await message.reply_text(f"{sedo}",True)
-   
+    oze = random.choice(wikiquote.quotes('albert Einstein', lang="en"))
+    await message.reply_text(f"{oze}",True)
     
 FunBot.run()
