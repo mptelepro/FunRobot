@@ -2,4 +2,4 @@ pyrogram>=1.0.0
 tgcrypto
 python-dotenv
 pyjokes
-quotes
+quote
