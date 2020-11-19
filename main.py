@@ -28,7 +28,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton(text="Updates Channel", url="t.me/prothinkergang")],
-                [InlineKeyboardButton(text="Deploy Your Own Bot",url="https://dashboard.heroku.com/new?template=https://github.com/prothinkergang/funrobot")]
+                [InlineKeyboardButton(text="Deploy Your Own Bot",url="https://github.com/ProThinkerGang/FunRobot")]
             ]
         )
     )
