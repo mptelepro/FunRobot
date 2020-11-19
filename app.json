@@ -1,9 +1,9 @@
 {
-  "name": "Image upload bot",
-  "description": "A bot to upload telegram images to telegraph",
-  "repository": "https://github.com/CyberBoyAyush/Image-UploadBot",
+  "name": "Fun Robot",
+  "description": "A MultiTasking Fun Bot",
+  "repository": "https://github.com/Prothinkergang/FunRobot",
   "logo": "https://telegra.ph/file/33adaf8d6c398edf81967.jpg",
-  "keywords": ["telegram", "telegraph", "imageuploader","telegram bot"],
+  "keywords": ["telegram","Fun bot","Telegram fun bot","Telegram bot","entertainment bot","entertainment"],
   "env": {
      "BOT_TOKEN": {
       "description": "Your Bot token from @Botfather",
@@ -13,6 +13,10 @@
       "description": "Your API_ID from https://my.telegram.org/apps ",
       "value": ""
     },
+    "CHAT_GROUPS": {
+      "description": "Enter The Username/ids of Groups where bot shou;d work",
+      "value": ""
+    }
     "API_HASH": {
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
