@@ -4,3 +4,4 @@ python-dotenv
 pyjokes
 quote
 goodreads_quotes 
+wikiquote
