@@ -67,7 +67,7 @@ async def decideok(client, message):
 async def quotes(client, message):
     abc = random.choice(wikiquote.quotes('Stephen Hawking', lang="en"))
     abc1 = f"{abc}\n\n**Author - __Stephen Hawking__**"
-    bcd = random.choice(wikiquote.quotes('APJ Abdul Kalam', lang="en"))
+    bcd = random.choice(wikiquote.quotes('A._P._J._Abdul_Kalam', lang="en"))
     bcd1 = f"{bcd}\n\n**Author - __Apj Abdul Kalam__**"
     allen = random.choice([abc1,bcd1])
     await message.reply_text(f"{allen}",True)
