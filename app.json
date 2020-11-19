@@ -16,7 +16,7 @@
     "CHAT_GROUPS": {
       "description": "Enter The Username/ids of Groups where bot shou;d work",
       "value": ""
-    }
+    },
     "API_HASH": {
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
