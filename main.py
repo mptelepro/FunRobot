@@ -33,29 +33,29 @@ async def start(client, message):
         )
     )
 
-    
-diceoutput = random.randrange(1,6)
+   
 @FunBot.on_message(filters.command("dice") & filters.chat(f'{CHATSTOWORK}'))
 async def throwdice(client, message):
-    await message.reply_text(f"**Results ==>>  '{diceoutput}'**",True)
+    diceoutput = random.randrange(1,6)
+    await message.reply_text(f"**Results ==>> {diceoutput}**",True)
     
     
 @FunBot.on_message(filters.command("jokes") & filters.chat(f'{CHATSTOWORK}'))
-async def throwdice(client, message):
+async def jokesop(client, message):
     SARCASM = pyjokes.get_joke()
     await message.reply_text(f"`{SARCASM}`",True)
     
     
 Dechoices = ("Yes","No","Surely Yes","Maybe","Nooo.","God Knows","Cant decide")
 @FunBot.on_message(filters.command("decide") & filters.chat(f'{CHATSTOWORK}'))
-async def throwdice(client, message):
+async def decideok(client, message):
     oploa = random.randrange(0,len(Dechoices)-1)
     Secom = Dechoices[oploa]
     await message.reply_text(f"{Secom}",True)
     
 @FunBot.on_message(filters.command("kill") & filters.chat(f'{CHATSTOWORK}'))
-async def throwdice(client, message):
-    await message.reply_text("Ready to Die...")
+async def killanime(client, message):
+    await message.send_message("Ready to Die...")
     await shh.sleep(0.7)
     await message.edit_text("Ｆｉｉｉｉｉｒｅ")
     await shh.sleep(0.7)
