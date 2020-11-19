@@ -55,7 +55,7 @@ async def decideok(client, message):
     
 @FunBot.on_message(filters.command("kill") & filters.chat(f'{CHATSTOWORK}'))
 async def killanime(client, message):
-    await message.send_message("Ready to Die...")
+    await client.send_message("Ready to Die...")
     await shh.sleep(0.7)
     await message.edit_text("Ｆｉｉｉｉｉｒｅ")
     await shh.sleep(0.7)
