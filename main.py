@@ -39,8 +39,13 @@ async def throwdice(client, message):
     diceoutput = random.randrange(1,6)
     await message.reply_text(f"**Results ==>> {diceoutput}**",True)
     
+@FunBot.on_message(filters.command("help") &  (filters.group | filters.private)
+                  )
+async def helpcmd(client, message):
+    await message.reply_text(f"**Below are The Avaliable Commands**\n\n-`/dice`- Throw a Dice and Give Output\n-`/Jokes`- Gives Programming Jokes\n-`/decice`- Send Yes or No, etc Option..",True)
     
-@FunBot.on_message(filters.command("jokes") & filters.group)
+    
+@FunBot.on_message(filters.command("jokes") & (filters.group | filters.private))
 async def jokesop(client, message):
     SARCASM = pyjokes.get_joke()
     await message.reply_text(f"`{SARCASM}`",True)
