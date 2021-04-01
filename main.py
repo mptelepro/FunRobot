@@ -9,6 +9,7 @@ import wikiquote
 from pyrogram import Client, filters
 from creds import Credentials
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from config import Config
 logging.basicConfig(level=logging.INFO)
 
 
