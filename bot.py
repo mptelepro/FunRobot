@@ -6,8 +6,7 @@ logging.basicConfig(level=logging.INFO)
 
 plugins = dict(
     root="main",
-    include=[
-        "main",
+    include=[        
         "main"
     ]
 )
